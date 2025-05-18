@@ -113,7 +113,7 @@ Conteúdo do 'drone_0_script.txt':
 
 - A cada atualização de posição, o sistema calcula a distância entre os drones.
 - Se a distância entre dois drones for inferior à definida pelo utilizador, uma colisão é registada.
-- Os drones envolvidos recebem um sinal SIGSUP.
+- Os drones envolvidos recebem um sinal SIGSUR1.
 - O sistema armazena o timestamp e o ID dos drones envolvidos na colisão.
 
 
