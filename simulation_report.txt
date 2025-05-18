@@ -1,0 +1,74 @@
+=======================================================
+             DRONE FIGURE SIMULATION REPORT            
+=======================================================
+
+Generated: 2025-05-17 22:34:16
+Figure File: 
+
+SUMMARY
+-------
+Total Drones: 3
+Total of Collisions: 5
+Maximum number of collisions to failed: 5
+Validation Result: FAILED
+
+DRONE STATUS
+------------
+Drone 0:
+  Script: drone_0_script.txt
+  Total Steps: 6
+  Status: Terminated (Collision)
+  Final Position: (4.00, 4.00, 10.00)
+
+Drone 1:
+  Script: drone_1_script.txt
+  Total Steps: 6
+  Status: Terminated (Collision)
+  Final Position: (3.00, 2.00, 10.00)
+
+Drone 2:
+  Script: drone_2_script.txt
+  Total Steps: 6
+  Status: Terminated (Collision)
+  Final Position: (2.00, 3.00, 10.00)
+
+COLLISION DETAILS
+------------------
+Collision 1:
+  Drones Involved: 0 and 1
+  Time: 2.00 seconds
+  Distance: 2.24 meters
+  Drone 0 Position: (2.00, 2.00, 10.00)
+  Drone 1 Position: (4.00, 1.00, 10.00)
+
+Collision 2:
+  Drones Involved: 0 and 2
+  Time: 2.00 seconds
+  Distance: 2.24 meters
+  Drone 0 Position: (2.00, 2.00, 10.00)
+  Drone 2 Position: (1.00, 4.00, 10.00)
+
+Collision 3:
+  Drones Involved: 0 and 1
+  Time: 3.00 seconds
+  Distance: 1.58 meters
+  Drone 0 Position: (3.00, 3.00, 10.00)
+  Drone 1 Position: (3.50, 1.50, 10.00)
+
+Collision 4:
+  Drones Involved: 0 and 2
+  Time: 3.00 seconds
+  Distance: 1.58 meters
+  Drone 0 Position: (3.00, 3.00, 10.00)
+  Drone 2 Position: (1.50, 3.50, 10.00)
+
+Collision 5:
+  Drones Involved: 1 and 2
+  Time: 3.00 seconds
+  Distance: 2.83 meters
+  Drone 1 Position: (3.50, 1.50, 10.00)
+  Drone 2 Position: (1.50, 3.50, 10.00)
+
+RECOMMENDATIONS
+----------------
+Modify drone paths to prevent the above collisions.
