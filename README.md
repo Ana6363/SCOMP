@@ -119,7 +119,9 @@ Conteúdo do 'drone_0_script.txt':
 
 #### US264 - Synchronize drone execution with a time step
 
-- Coordenar drones a partir de pipes.
+- A simulação avança com passos de tempo de 100ms, utilizando a função usleep(100000).
+- Cada drone lê uma linha do seu script e espera o tempo correspondente antes de executar o movimento.
+- A sincronização é garantida pela temporização dos rocessos.
 
 
 
