@@ -112,32 +112,47 @@ Conteúdo do 'drone_0_script.txt':
 #### US263 - Detect drone collisions in real time
 
 - A cada atualização de posição, o sistema calcula a distância entre os drones.
-- Se a distância entre dois drones for inferior a 1.0, uma colisão é registada.
-- Os drones envolvidos recebem um sinal SIGTERM.
+- Se a distância entre dois drones for inferior à definida pelo utilizador, uma colisão é registada.
+- Os drones envolvidos recebem um sinal SIGSUP.
 - O sistema armazena o timestamp e o ID dos drones envolvidos na colisão.
 
 
 #### US264 - Synchronize drone execution with a time step
 
-- A simulação avança com passos de tempo de 100ms, utilizando a função "usleep(100000)".
-- Cada drone lê uma linha do seu script e espera o tempo correspondente antes de executar o movimento.
-- A sincronização é garantida pela temporização dos processos.
+- Coordenar drones a partir de pipes.
+
 
 
 #### US265 - Generate a simulation report
 
-- Criação do ficheiro "simulation.txt" com os seguintes atributos:
-    - Número total de drones
-    - Estado final (executado ou colisão)
-    - Timestamps de colisão
-    - Resultado da simulação (sucesso ou falha), dependendo da ocorrência de colisões.
+- Criação do ficheiro "Simulation_Report.txt" com os seguintes atributos:
+
+  -> Resumo: 
+      - Número total de drones
+      - Número total de colisões 
+      - Número máximo de colisões para ocrroer a falha 
+      - Estado final (executado ou colisão)
+
+  -> INFORMAÇÕES DO DRONE: 
+      - ID do drone
+      - Script usado
+      - Status (sucesso ou falha)
+      - Posição final (X, Y, Z)
+
+  -> DETALHES DA COLISÃO:
+    - ID dos drones envolvidos
+    - Tempo de colisão
+    - Timestamp da colisão do primeiro drone
+    - Timestamp da colisão do segundo drone
+
+  -> RECOMENDAÇÕES
 
 
 ## Auto-avaliação de compromisso
 
 |        Nome        | Compromisso (%) | Auto-avaliação | 
 |:------------------:|:---------------:|:--------------:|
-|    Ana Oliveira    |       90        |       15       | 
-|      Beatriz       |       90        |       15       | 
-|    Carlos Teles    |       90        |       15       |  
-| Francisco Silveira |       90        |       15       |
+|    Ana Oliveira    |       85        |       15       | 
+|   Beatriz Costa    |       85        |       15       | 
+|   António Teles    |       85        |       15       |  
+| Francisco Silveira |       85        |       15       |
