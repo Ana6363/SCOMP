@@ -13,7 +13,7 @@
 #include "report.h"
 #include "collision.h"
 
-
+#define SIMULATION_STEP_TIME 1
 Drone drones[MAX_DRONES];
 int num_drones = 0;
 volatile sig_atomic_t simulation_running = 1;
@@ -139,6 +139,7 @@ void start_simulation() {
 
         detect_collisions();
 
+        sleep(SIMULATION_STEP_TIME);
     }
 
     cleaning_drones();
