@@ -1,0 +1,187 @@
+===============================================================
+                DRONE SIMULATION REPORT                        
+===============================================================
+
+Report Generated: 2025-06-14 22:05:37
+
+SIMULATION SUMMARY
+=================
+Total Drones simulated: 11
+Simulation Duration: 1.00 seconds
+Total Steps Executed: 1
+Maximum Steps Possible: 15
+Completion Rate: 6.7%
+Collision Detection Radius: 100.00 meters
+Total Collisions Detected: 5
+Maximum Collisions Allowed: 5
+FINAL VALIDATION RESULT: FAILED - COLLISION THRESHOLD EXCEEDED
+
+DETAILED DRONE EXECUTION STATUS
+================================
+ DRONE 0: 
+   Script File: drone_0_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (10.00, 15.00, 20.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (5 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 1: 
+   Script File: drone_1_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (15.00, 10.00, 15.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (1 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 2: 
+   Script File: drone_2_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (5.00, 8.00, 12.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (1 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 3: 
+   Script File: drone_3_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (25.00, 25.00, 20.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (1 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 4: 
+   Script File: drone_4_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (2.00, 3.00, 5.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (1 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 5: 
+   Script File: drone_5_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (12.00, 13.00, 15.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: YES (1 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 6: 
+   Script File: drone_6_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (8.00, 5.00, 15.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: NO (0 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 7: 
+   Script File: drone_7_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (18.00, 15.00, 25.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: NO (0 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 8: 
+   Script File: drone_8_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (2.00, 2.00, 2.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: NO (0 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 9: 
+   Script File: drone_9_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (15.00, 15.00, 15.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: NO (0 events)
+   Simulation Duration: 1.00 seconds
+
+ DRONE 10: 
+   Script File: drone_10_script.txt
+   Steps Completed: 1 / 15 (6.7%)
+   Final Position: (10.00, 10.00, 20.00) meters
+   Last Update Time: 1.00 seconds
+   Collision Involvement: NO (0 events)
+   Simulation Duration: 1.00 seconds
+
+COMPREHENSIVE COLLISION ANALYSIS
+=================================
+Total Collision Events: 5
+Collision Detection Method: Real-time Distance Calculation
+Safety Threshold: 100.00 meters
+
+=================================
+ COLLISION #1
+ -------------------
+   Timestamp: 1.00 seconds
+   Simulation Step: 1
+   Drones Involved: Drone 0 and Drone 1
+   Collision Distance: 8.66 meters
+   Safety Margin Violation: 91.34 meters
+   Drone 0 Position: (10.00, 15.00, 20.00)
+   Drone 1 Position: (15.00, 10.00, 15.00)
+
+ COLLISION #2
+ -------------------
+   Timestamp: 1.00 seconds
+   Simulation Step: 1
+   Drones Involved: Drone 0 and Drone 2
+   Collision Distance: 11.75 meters
+   Safety Margin Violation: 88.25 meters
+   Drone 0 Position: (10.00, 15.00, 20.00)
+   Drone 2 Position: (5.00, 8.00, 12.00)
+
+ COLLISION #3
+ -------------------
+   Timestamp: 1.00 seconds
+   Simulation Step: 1
+   Drones Involved: Drone 0 and Drone 3
+   Collision Distance: 18.03 meters
+   Safety Margin Violation: 81.97 meters
+   Drone 0 Position: (10.00, 15.00, 20.00)
+   Drone 3 Position: (25.00, 25.00, 20.00)
+
+ COLLISION #4
+ -------------------
+   Timestamp: 1.00 seconds
+   Simulation Step: 1
+   Drones Involved: Drone 0 and Drone 4
+   Collision Distance: 20.81 meters
+   Safety Margin Violation: 79.19 meters
+   Drone 0 Position: (10.00, 15.00, 20.00)
+   Drone 4 Position: (2.00, 3.00, 5.00)
+
+ COLLISION #5
+ -------------------
+   Timestamp: 1.00 seconds
+   Simulation Step: 1
+   Drones Involved: Drone 0 and Drone 5
+   Collision Distance: 5.74 meters
+   Safety Margin Violation: 94.26 meters
+   Drone 0 Position: (10.00, 15.00, 20.00)
+   Drone 5 Position: (12.00, 13.00, 15.00)
+
+SAFETY ASSESSMENT & RECOMMENDATIONS
+====================================
+  SAFETY VALIDATION: FAILED
+  Collision threshold exceeded (5/5 collisions detected)
+  The current simulation formation poses significant safety risks.
+
+  MANDATORY CORRECTIVE ACTIONS:
+   • Revise simulation paths to increase separation distances
+   • Consider reducing the number of drones in congested areas
+
+  TECHNICAL PERFORMANCE METRICS
+   • Total Simulation Steps: 15
+   • Memory Usage: 57504 bytes shared memory
+   • Process Termination: Clean shutdown 
+
+===============================================================
+                    END OF SIMULATION REPORT                 	   
+===============================================================
+Report Status: Complete
+Data Integrity: Verified
+Validation: REJECTED
+Next Action Required: Immediate safety review required
