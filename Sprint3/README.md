@@ -3,52 +3,53 @@
 
 ## Diagrama de Componentes
 
+## Diagrama de Componentes
+
 <pre lang="markdown">
 +-------------------------------------------------------------+
 |                        Main Process                         |
 |                          (main.c)                           |
-+-----------+------------------+------------------+-----------+
-            |                  |                  |
-            v                  v                  v
- +----------------+  +-----------------+  +-------------------+
- | Environment    |  | Collision        |  | Report Generation |
- | Thread (opt.)  |  | Detection Thread |  | Thread            |
- +-------+--------+  +--------+---------+  +---------+---------+
-         |                     |                      |
-         v                     |                      v
- +----------------+     +-----+-----+         +-------+--------+
- | Load Wind File |     | Scan SHM  |         | Wait on Cond.  |
- +----------------+     | for Coll. |         | Var. (pthread) |
-                        +-----+-----+         +--------+-------+
-                              |                        |
-                              v                        v
-                        +-----+-----+          +-------+--------+
-                        | Signal     |-------->| Process Report |
-                        | Condition  |         | + Write Log    |
-                        | Variable   |         +----------------+
-                        +-----+-----+
-                              |
-                              v
-                    +---------+-----------+
-                    | Shared Memory (SHM) |
-                    | + Mutex + Semaphores|
-                    +---------+-----------+
-                              ^
-                              |
-        +---------------------+-------------------------+
-        |                     |                         |
-        v                     v                         v
-+-----------------+  +-----------------+        +-----------------+
-| Drone Process 0 |  | Drone Process 1 |  ...   | Drone Process N |
-+--------+--------+  +--------+--------+        +--------+--------+
-         |                    |                          |
-         v                    v                          v
-+-----------------+  +-----------------+        +-----------------+
-| Read Script     |  | Read Script     |        | Read Script     |
-| Update SHM      |  | Update SHM      |        | Update SHM      |
-| Wait/Signal Sem |  | Wait/Signal Sem |        | Wait/Signal Sem |
-+-----------------+  +-----------------+        +-----------------+
++--------------------+--------------------+-------------------+
+                     |                    |
+                     v                    v
+          +-------------------+  +-------------------+
+          | Collision Thread  |  | Report Thread     |
+          +--------+----------+  +--------+----------+
+                   |                      |
+                   v                      v
+          +--------+----------+  +--------+----------+
+          | Scan SHM for      |  | Wait on Cond. Var |
+          | collisions        |  | (pthread)         |
+          +--------+----------+  +--------+----------+
+                   |                      |
+                   v                      v
+          +--------+----------+  +--------+----------+
+          | Signal Condition  |  | Process Report    |
+          | Variable          |  | + Write Log       |
+          +--------+----------+  +-------------------+
+                   |
+                   v
+         +---------+-----------+
+         | Shared Memory (SHM) |
+         | + Mutex + Semaphores|
+         +---------+-----------+
+                   ^
+                   |
+  +----------------+---------------------------+
+  |                |                           |
+  v                v                           v
++----------------+  +----------------+  +----------------+
+| Drone Process 0|  | Drone Process 1|  | Drone Process N|
++--------+-------+  +--------+-------+  +--------+-------+
+         |                  |                   |
+         v                  v                   v
++----------------+  +----------------+  +----------------+
+| Read Script    |  | Read Script    |  | Read Script    |
+| Update SHM     |  | Update SHM     |  | Update SHM     |
+| Wait/Signal Sem|  | Wait/Signal Sem|  | Wait/Signal Sem|
++----------------+  +----------------+  +----------------+
 </pre>
+"""
 
 ## Exemplo de Script de Movimento
 
