@@ -84,7 +84,6 @@ Conteúdo do 'drone_0_script.txt':
 
 - Thread `collision`: varre posições dos drones e deteta colisões.
 - Thread `report`: aguarda sinalização por colisões e escreve log.
-- *(Opcional)* Thread `environment`: lê ficheiro de vento e atualiza SHM.
 
 ###  US363 - Notificação via condição
 
@@ -106,11 +105,7 @@ Conteúdo do 'drone_0_script.txt':
     - Resultado (sucesso/falha)
 - Gerado por `report.c` e gravado em ficheiro.
 
-### US366 - Integração de vento (grupos ≥ 5)
 
-- `environment.c` lê `environment.txt` com direção e velocidade do vento.
-- Drift aplicado às posições antes da verificação de colisão.
-- Sincronizado com os passos da simulação.
 
 ## Auto-avaliação de compromisso
 
