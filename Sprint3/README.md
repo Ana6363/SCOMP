@@ -84,6 +84,8 @@ Conteúdo do 'drone_0_script.txt':
 
 - Thread `collision`: varre posições dos drones e deteta colisões.
 - Thread `report`: aguarda sinalização por colisões e escreve log.
+- Thread `step`: controla o avanço da simulação passo-a-passo, sinalizando os semáforos dos drones a cada "tick".
+
 
 ###  US363 - Notificação via condição
 
